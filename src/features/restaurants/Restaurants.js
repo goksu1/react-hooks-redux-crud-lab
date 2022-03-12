@@ -1,7 +1,13 @@
 import React from "react";
-
-function Restaurants() {
-  return <ul>Restaurants Component</ul>;
+import Restaurant from "./Restaurant";
+function Restaurants({ restaurants }) {
+  return (
+    <ul>
+      {restaurants.map((restaurant) => (
+        <Restaurant key={restaurant.id} restaurant={restaurant} />
+      ))}
+    </ul>
+  );
 }
 
 export default Restaurants;
